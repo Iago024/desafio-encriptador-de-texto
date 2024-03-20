@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Encriptador de texto</title>
+</head>
+<body onload="ajustarCorDeFundo()">
+    <header>
+        <div class="relogio">
+            <div>
+                <span id="horas">00</span>
+                <span class="tempo">'</span>
+            </div>
+            <div>
+                <span id="minutos">00</span>
+                <span class="tempo">:</span>
+            </div>
+            <div>
+                <span id="segundos">00</span>
+                <!-- <span class="tempo">Seg</span> -->
+            </div>
+        </div>
+        <nav id="menu">
+            <span class="opcao"><a href="../index.html
+                ">HOME</a></span>
+            <span class="opcao"><a href="./sobre/sobre.html">SOBRE</a></span>
+        </nav>
+    </header>
+    <main class="principal">
+        <div class="titulo_principal">
+            <h1><strong>Encriptador</strong> de Texto</h1>
+        </div>
+        <div class="conteudo">
+            <textarea name="entrada" id="entrada" cols="100" rows="30" placeholder="Digite seu texto aqui"></textarea>
+
+            <textarea name="saida" id="saida" cols="50" rows="30" placeholder="Tradução" readonly></textarea>
+            
+        </div>
+        <div class="btns">
+            <button onclick="criptografar()" type="button" class="criptografar" disabled>Criptografar</button>
+            <button onclick="descriptografar()" type="button" class="descriptografar" disabled>Descriptografar</button>
+            <button onclick="limparTexto()" type="button" class="limpar" disabled>Limpar</button>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./js/app.js" defer></script>
+</body>
+</html>
+

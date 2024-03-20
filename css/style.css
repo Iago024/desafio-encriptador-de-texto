@@ -1,0 +1,205 @@
+:root {
+    --fonte-primaria: 'Montserrat', sans-serif;
+    --fonte-secundaria: 'Roboto', sans-serif;
+
+    --borda-botao: #000;
+    --cor-botao-fonte: #EFEFEF;
+
+    --cor-botao-criptografar-hover: #00bf00;
+    --cor-botao-descriptografar-hover: #0000af;
+    --cor-botao-limpar-hover: #7f7f7f;
+    --cor-menu-underline-hover: #92a2b9;
+
+    --cor-botao-criptografar-active: #00ff00;
+    --cor-botao-descriptografar-active: #0000ff;
+}
+
+@keyframes bounce {
+    0%, 40%, 50%, 100% {
+        transform: translateY(0);
+    }
+
+    10%, 80% {
+        transform: translateY(-4px);
+    }
+
+    20%, 60% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes chacoalhar {
+    0%, 100% {
+        transform: rotate(0);
+    }
+
+    20%, 60% {
+        transform: rotate(-15deg);
+    }
+
+    40%, 80% {
+        transform: rotate(15deg);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.opcao a {
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    color: var(--cor-botao-fonte);
+}
+
+.opcao a:hover {
+    border-bottom: 2.5px solid var(--cor-menu-underline-hover);
+    transition-duration: 50ms;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: var(--fonte-primaria);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.relogio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.titulo_principal {
+    display: flex;
+    justify-content: flex-start;
+}
+
+h1 {
+    margin: 1rem;
+}
+
+.conteudo {
+    position: relative;
+    margin: 1em;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+}
+
+#entrada {
+    font-family: var(--fonte-secundaria);
+    width: 600px;
+    height: 472px;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 0px 0px 0px 10px;
+    color: var(--borda-botao);
+}
+
+#saida {
+    font-family: var(--fonte-secundaria);
+    width: 400px;
+    height: 472px;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.btns {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+    outline: none;
+}
+
+.criptografar {
+    margin: 5px;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    border: 1px solid var(--borda-botao);
+    width: 8em;
+    padding: 1em;
+}
+
+.descriptografar {
+    margin: 5px;
+    transition-duration: 0.4s;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: 1px solid var(--borda-botao);
+    width: 10em;
+    padding: 1em;
+}
+
+.limpar {
+    margin: 5px;
+    width: 8%;
+    transition-duration: 0.4s;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: 1px solid var(--borda-botao);
+    padding: 1em;
+}
+
+.criptografar:disabled, .descriptografar:disabled, .limpar:disabled {
+    border-radius: 8px;
+}
+
+.criptografar:hover {
+    animation: bounce 0.7s ease-in;
+    background-color:var(--cor-botao-criptografar-hover);
+    color: var(--cor-botao-fonte);
+    border-radius: 8px;
+}
+
+.descriptografar:hover {
+    animation: chacoalhar 0.6s ease-in;
+    background-color: var(--cor-botao-descriptografar-hover);
+    color: var(--cor-botao-fonte);
+    border-radius: 8px;
+}
+
+.limpar:hover {
+    animation: bounce 0.7s ease-in;
+    background-color:var(--cor-botao-limpar-hover);
+    color: var(--cor-botao-fonte);
+    border-radius: 8px;
+}
+
+.criptografar:active {
+    background-color: var(--cor-botao-criptografar-active);
+    transition-duration: 0ms;
+}
+
+.descriptografar:active {
+    background-color: var(--cor-botao-descriptografar-active);
+    transition-duration: 0ms;
+}
